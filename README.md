@@ -25,6 +25,19 @@ asyncio
 ffmpeg (https://www.gyan.dev/ffmpeg/builds/)
 gtts
 
+#### To Install ffmpeg
 
+- Download the FFmpeg build from the official website (https://ffmpeg.org/download.html).
+- Extract the downloaded zip file.
+- Add the bin folder from the extracted file to your system's PATH.
+
+For the last step, you can follow these instructions:
+
+- Press Win + X and choose System.
+- Click on "Advanced system settings".
+- In the System Properties window that opens, click on the "Environment Variables" button.
+- In the Environment Variables window, under "System variables", find and select the "Path" variable, then click on "Edit".
+- In the Edit Environment Variable window, click on "New", then "Browse".
+- Navigate to the bin folder in the extracted FFmpeg folder, select it, and click on "OK" in all windows.
 
 ###### Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
