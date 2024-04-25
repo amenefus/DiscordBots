@@ -17,7 +17,7 @@ Set up a bot on the Discord developer portal, and get your bot token. (https://d
 - Run the bot by executing `'python discord_tts.py'`.
 
 #### Usage
-The bot listens private message using `!tts <message>` in the server and converts them into speech.
+The bot listens private message using `!r <message>` in the server and converts them into speech.
 
 > **_NOTE:_**  The script will create temp.mp3 and time.mp3 in order to stream it. you can enhance to delete files upon every stream.
 
