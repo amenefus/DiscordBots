@@ -85,6 +85,24 @@ async def shoulder(ctx):
 
 
 # ====================== END VOICE CHANNEL OPERATIONS ====================== #
+@bot.event
+async def on_voice_state_update(member, before, after):
+    specific_member_id = 344131780586110976  # Replace with the ID of the specific member
+    member_to_move_id = 804570109498359878  # Replace with the ID of the member to move
+    channel_to_move_to_id = 1083441236112834690  # Replace with the ID of the channel to move to
+
+    # If the member who triggered the event is the member to move, do nothing
+    if member.id == member_to_move_id:
+        return
+
+    if member.id == specific_member_id and after.channel is not None:
+        member_to_move = member.guild.get_member(member_to_move_id)
+        if member_to_move is not None and member_to_move.voice is not None and member_to_move.voice.channel is not None:
+            channel_to_move_to = bot.get_channel(channel_to_move_to_id)
+            if channel_to_move_to is not None:
+                await member_to_move.move_to(channel_to_move_to)
+                await member_to_move.send('Moved to AFK channel due to Member {specific_member_id} joining a voice channel.'.format(specific_member_id=specific_member_id))
+
 # ====================== Time Teller ====================== #
 
 @bot.command()
